@@ -20,7 +20,7 @@ export function EndingSection() {
       <div className="z-10 animate-in fade-in duration-1000 delay-500 fill-mode-both">
         
         {!isRevealed ? (
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-4">
                 <Button 
                     onClick={handleReveal} 
                     size="lg" 
@@ -28,6 +28,7 @@ export function EndingSection() {
                 >
                     <Heart className="w-8 h-8" />
                 </Button>
+                <p className="font-body text-lg text-muted-foreground">Click Me</p>
             </div>
         ) : (
             <div className="flex flex-col items-center">
