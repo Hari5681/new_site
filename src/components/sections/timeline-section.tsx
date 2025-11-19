@@ -46,7 +46,7 @@ export function TimelineSection() {
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-headline text-5xl md:text-7xl text-primary-foreground/80 animate-in fade-in-0 duration-1000">
-            Our Journey
+            KEEP JOURNER
           </h2>
            <p className="font-body text-lg md:text-xl text-muted-foreground mt-4 animate-in fade-in-0 duration-1000 delay-200">
                 A collection of our shared moments and feelings.
@@ -78,3 +78,4 @@ export function TimelineSection() {
     </section>
   );
 }
+
