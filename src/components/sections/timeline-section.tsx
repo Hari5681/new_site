@@ -13,8 +13,6 @@ const timelineEvents = [
   { id: 1, title: "The Day I'll Propose…", href: "/journey/proposal", description: "Counting down to our forever." },
   { id: 2, title: "Our 2 Month Journey", href: "/journey/2-months", description: "Moments I’ll always keep close." },
   { id: 3, title: "A Letter For You", href: "/journey/letter", description: "Words straight from my heart." },
-  { id: 4, title: "Unspoken Lines", href: "/journey/unspoken-lines", description: "Things I've always wanted to say." },
-  { id: 5, title: "A Gallery of Us", href: "/journey/memories", description: "Memories I kept close to my heart." },
 ];
 
 function AnimatedCard({
