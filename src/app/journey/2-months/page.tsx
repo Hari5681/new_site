@@ -68,7 +68,7 @@ export default function TwoMonthsJourneyPage() {
 
         <div className="text-center mb-16 animate-in fade-in duration-1000">
             <h1 className="font-headline text-5xl md:text-7xl text-primary-foreground/80">
-                The 2-Month Journey & Memories
+                memory with u
             </h1>
             <p className="font-body text-lg md:text-xl text-muted-foreground mt-4">
                 “Two months of moments, conversations, and silent understandings.”
