@@ -7,15 +7,15 @@ import { Card, CardContent } from "@/components/ui/card";
 const unspokenLines = [
   {
     id: 1,
-    line: "The way you smile when you think no one is looking... it's my favorite thing in the world.",
+    line: "The way your eyes light up when you talk about something you're passionate about is captivating.",
   },
   {
     id: 2,
-    line: "Sometimes I get scared of how much I love you, because I can't imagine my life without you.",
+    line: "You have a kindness that you show in small ways, even when you think no one is watching.",
   },
   {
     id: 3,
-    line: "I replay our first date in my head more often than I'd admit.",
+    line: "I've noticed you have a quiet strength that gets you through anything.",
   },
 ];
 
