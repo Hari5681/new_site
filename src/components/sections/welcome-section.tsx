@@ -1,3 +1,4 @@
+
 "use client";
 
 import { FloatingParticles } from "@/components/floating-particles";
@@ -51,7 +52,7 @@ export function WelcomeSection() {
           , this little space is just for you.
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-600">
-          Sep 20 — A day I’ll always remember.
+          Nov 20 — A day I’ll always remember.
         </p>
       </div>
     </section>
