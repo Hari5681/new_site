@@ -8,6 +8,7 @@ import { ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 const memories: Record<string, any> = {
     '1': {
@@ -39,9 +40,11 @@ const memories: Record<string, any> = {
         ]
     },
     '3': {
-        type: 'text',
+        type: 'image-with-text',
         title: 'Our First Hug',
-        content: "Mana first hug nee birthday roju. Ado oka warm connection… I’ll never forget it."
+        content: "Mana first hug nee birthday roju. Ado oka warm connection… I’ll never forget it.",
+        imageUrl: "https://i.ibb.co/9kWVSPFs/image.png",
+        imageHint: "couple drawing"
     },
     '4': {
         type: 'text',
@@ -115,6 +118,31 @@ export default function MemoryDetailPage() {
                                         </p>
                                     </div>
                                 ))}
+                            </CardContent>
+                        </Card>
+                    )}
+
+                    {memory.type === 'image-with-text' && (
+                        <Card className="rounded-2xl shadow-lg border-primary/10 bg-card overflow-hidden">
+                             <CardHeader className="bg-primary/5 p-8 text-center">
+                                <CardTitle className="font-headline text-4xl md:text-5xl text-primary-foreground/80 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200 fill-mode-both">{memory.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-8 grid md:grid-cols-2 gap-8 items-center">
+                                <div className="animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+                                     <Image
+                                        src={memory.imageUrl}
+                                        alt={memory.title}
+                                        width={500}
+                                        height={500}
+                                        className="rounded-lg shadow-lg object-cover aspect-square"
+                                        data-ai-hint={memory.imageHint}
+                                    />
+                                </div>
+                                <div className="animate-in fade-in slide-in-from-right-10 duration-1000 delay-500 fill-mode-both">
+                                    <p className="font-body text-lg text-card-foreground/90 italic leading-relaxed">
+                                        “{memory.content}”
+                                    </p>
+                                </div>
                             </CardContent>
                         </Card>
                     )}
