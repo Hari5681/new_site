@@ -3,16 +3,18 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useOnScreen } from "@/hooks/use-on-screen";
 import { FloatingParticles } from "@/components/floating-particles";
+import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 
 const timelineEvents = [
-  { id: 1, text: "The day I'll propose…", href: "/journey/proposal" },
-  { id: 2, text: "Moments I’ll Always Keep Close", href: "/journey/2-months" },
-  { id: 3, text: "A Letter For You", href: "/journey/letter" },
-  { id: 4, text: "Unspoken Lines", href: "/journey/unspoken-lines" },
-  { id: 5, text: "Memories I kept close...", href: "/journey/memories" },
+  { id: 1, title: "The Day I'll Propose…", href: "/journey/proposal", description: "Counting down to our forever." },
+  { id: 2, title: "Our 2 Month Journey", href: "/journey/2-months", description: "Moments I’ll always keep close." },
+  { id: 3, title: "A Letter For You", href: "/journey/letter", description: "Words straight from my heart." },
+  { id: 4, title: "Unspoken Lines", href: "/journey/unspoken-lines", description: "Things I've always wanted to say." },
+  { id: 5, title: "A Gallery of Us", href: "/journey/memories", description: "Memories I kept close to my heart." },
 ];
 
 function AnimatedCard({
@@ -28,12 +30,12 @@ function AnimatedCard({
   return (
     <div
       ref={ref}
-      className={`relative transition-all duration-700 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={cn(
+        "transition-all duration-1000 ease-out",
+        isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-12 scale-95"
+      )}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="hidden md:block absolute top-7 -left-5 w-4 h-4 bg-accent rounded-full border-4 border-background z-10"></div>
       {children}
     </div>
   );
@@ -41,21 +43,33 @@ function AnimatedCard({
 
 export function TimelineSection() {
   return (
-    <section className="w-full py-20 px-4 bg-primary/10 relative overflow-hidden">
+    <section className="w-full py-24 px-4 bg-primary/10 relative overflow-hidden">
       <FloatingParticles />
-      <div className="container mx-auto max-w-3xl relative z-10">
-        <h2 className="font-headline text-4xl md:text-6xl text-center text-gray-800 mb-16">
-          Our Journey
-        </h2>
-        <div className="relative md:border-l-2 md:border-accent/50 md:pl-10 space-y-12">
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="font-headline text-5xl md:text-7xl text-primary-foreground/80 animate-in fade-in-0 duration-1000">
+            Our Journey
+          </h2>
+           <p className="font-body text-lg md:text-xl text-muted-foreground mt-4 animate-in fade-in-0 duration-1000 delay-200">
+                A collection of our shared moments and feelings.
+            </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {timelineEvents.map((event, index) => (
             <AnimatedCard key={event.id} index={index}>
-              <Link href={event.href}>
-                <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/20 bg-card cursor-pointer">
-                  <CardContent className="p-6">
-                    <p className="text-lg font-body text-card-foreground">
-                      {event.text}
+              <Link href={event.href} className="block group">
+                <Card className="h-full shadow-lg hover:shadow-2xl transition-all duration-300 border-primary/20 bg-card cursor-pointer transform hover:-translate-y-2 hover:shadow-primary/20">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-3xl text-primary-foreground/80 group-hover:text-primary-foreground transition-colors duration-300">{event.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="font-body text-base text-card-foreground/80 mb-4">
+                      {event.description}
                     </p>
+                    <div className="flex items-center text-sm font-semibold text-primary-foreground/60 group-hover:text-primary-foreground transition-colors duration-300">
+                        <span>Explore</span>
+                        <ArrowRight className="ml-2 h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
                   </CardContent>
                 </Card>
               </Link>
