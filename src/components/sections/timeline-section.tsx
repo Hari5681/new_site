@@ -10,6 +10,9 @@ import { FloatingParticles } from "@/components/floating-particles";
 const timelineEvents = [
   { id: 1, text: "The day I'll propose…", href: "/journey/proposal" },
   { id: 2, text: "Moments I’ll Always Keep Close", href: "/journey/2-months" },
+  { id: 3, text: "A Letter For You", href: "/journey/letter" },
+  { id: 4, text: "Unspoken Lines", href: "/journey/unspoken-lines" },
+  { id: 5, text: "Memories I kept close...", href: "/journey/memories" },
 ];
 
 function AnimatedCard({
