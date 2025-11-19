@@ -20,7 +20,7 @@ export function WelcomeSection() {
         }`}
       >
         <h1 className="font-headline text-5xl md:text-7xl text-gray-800">
-          Hi… this little space is just for you.
+          chinnu this little space is just for you.
         </h1>
         <p className="mt-4 text-lg md:text-xl text-gray-600">
           Sep 20 — A day I’ll always remember.
