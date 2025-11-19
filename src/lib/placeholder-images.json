@@ -1,3 +1,68 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "gallery-1",
+      "description": "Sunset kisses on the beach.",
+      "imageUrl": "https://images.unsplash.com/photo-1516151322954-621642a2b64b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3VwbGUlMjBiZWFjaHxlbnwwfHx8fDE3NjM1MjI5OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "couple beach",
+      "width": 500,
+      "height": 750
+    },
+    {
+      "id": "gallery-2",
+      "description": "Never letting go.",
+      "imageUrl": "https://images.unsplash.com/photo-1695049761557-cb56d348c297?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxob2xkaW5nJTIwaGFuZHN8ZW58MHx8fHwxNzYzNDc3MTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "holding hands",
+      "width": 500,
+      "height": 350
+    },
+    {
+      "id": "gallery-3",
+      "description": "City lights and you.",
+      "imageUrl": "https://images.unsplash.com/photo-1521072100039-6052edf01606?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXR5JTIwbGlnaHRzfGVufDB8fHx8MTc2MzU0Mzc1MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city lights",
+      "width": 500,
+      "height": 600
+    },
+    {
+      "id": "gallery-4",
+      "description": "Our little corner cafe.",
+      "imageUrl": "https://images.unsplash.com/photo-1597308011529-f634f4cab827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3p5JTIwY2FmZXxlbnwwfHx8fDE3NjM0NzA4NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy cafe",
+      "width": 500,
+      "height": 400
+    },
+    {
+      "id": "gallery-5",
+      "description": "On top of the world together.",
+      "imageUrl": "https://images.unsplash.com/photo-1516366353199-ed694fec414f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHZpZXd8ZW58MHx8fHwxNzYzNTUxOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain view",
+      "width": 500,
+      "height": 800
+    },
+    {
+      "id": "gallery-6",
+      "description": "Perfect picnic days.",
+      "imageUrl": "https://images.unsplash.com/photo-1594249915229-de77ade01ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaWNuaWMlMjBwYXJrfGVufDB8fHx8MTc2MzQ0NTczNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "picnic park",
+      "width": 500,
+      "height": 300
+    },
+    {
+      "id": "gallery-7",
+      "description": "Laughing with you is my favorite.",
+      "imageUrl": "https://images.unsplash.com/photo-1501901609772-df0848060b33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb3VwbGUlMjBzbWlsaW5nfGVufDB8fHx8MTc2MzUyNzI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "couple smiling",
+      "width": 500,
+      "height": 500
+    },
+    {
+      "id": "gallery-8",
+      "description": "Adventures are better with you.",
+      "imageUrl": "https://images.unsplash.com/photo-1656558136312-71b8f36bea25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3VwbGUlMjB0cmF2ZWx8ZW58MHx8fHwxNzYzNTI0NDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "couple travel",
+      "width": 500,
+      "height": 650
+    }
+  ]
 }
