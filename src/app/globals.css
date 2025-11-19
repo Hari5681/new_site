@@ -82,3 +82,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes unblur {
+    from {
+      filter: blur(5px);
+      opacity: 0;
+    }
+    to {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-unblur {
+    animation: unblur 0.7s ease-out forwards;
+  }
+}

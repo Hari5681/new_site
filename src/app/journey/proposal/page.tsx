@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { FloatingParticles } from "@/components/floating-particles";
 import Link from "next/link";
@@ -11,23 +13,27 @@ export default function ProposalPage() {
     <main className="flex min-h-screen flex-col items-center p-4 md:p-24 relative bg-background">
       <FloatingParticles />
       <div className="z-10 w-full max-w-4xl">
-        <Link href="/#">
-          <Button variant="ghost" className="mb-8">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Home
-          </Button>
-        </Link>
-        <div className="bg-card p-8 md:p-12 rounded-lg shadow-lg">
-          <h1 className="font-headline text-4xl md:text-6xl text-gray-800 mb-4 text-center">
+        <div className="animate-in fade-in duration-500">
+            <Link href="/#">
+            <Button variant="ghost" className="mb-8">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Home
+            </Button>
+            </Link>
+        </div>
+        <div className="bg-card p-8 md:p-12 rounded-lg shadow-lg animate-in fade-in-0 zoom-in-95 duration-1000 delay-200 fill-mode-both">
+          <h1 className="font-headline text-4xl md:text-6xl text-gray-800 mb-4 text-center animate-in fade-in slide-in-from-bottom-5 duration-700 delay-300 fill-mode-both">
             The Day I'll Propose
           </h1>
-          <p className="font-body text-lg text-card-foreground text-center mb-8">
+          <p className="font-body text-lg text-card-foreground text-center mb-8 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-500 fill-mode-both">
             Counting down every moment until I ask you to be mine.
           </p>
           
-          <Countdown date={proposalDate} />
+          <div className="animate-in fade-in-0 zoom-in-95 duration-700 delay-700 fill-mode-both">
+            <Countdown date={proposalDate} />
+          </div>
 
-          <div className="space-y-6 font-body text-lg text-card-foreground mt-12 text-center">
+          <div className="space-y-6 font-body text-lg text-card-foreground mt-12 text-center animate-in fade-in slide-in-from-bottom-5 duration-700 delay-900 fill-mode-both">
             <p>
               This day became the day I stopped hiding my heart and finally let it speak.
             </p>

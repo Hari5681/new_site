@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { PageTransition } from "@/components/page-transition";
 
 export const metadata: Metadata = {
   title: "Soft Echoes",
@@ -23,7 +24,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
         <Toaster />
       </body>
     </html>
