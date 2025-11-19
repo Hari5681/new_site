@@ -1,17 +1,28 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { useOnScreen } from "@/hooks/use-on-screen";
 import { FloatingParticles } from "@/components/floating-particles";
 
 const timelineEvents = [
-  { id: 1, text: "The day I proposed…" },
-  { id: 2, text: "Two months of memories…" },
-  { id: 3, text: "Small moments that meant everything to me." },
+  { id: 1, text: "The day I proposed…", href: "/journey/proposal" },
+  { id: 2, text: "Two months of memories…", href: "/journey/memories" },
+  {
+    id: 3,
+    text: "Small moments that meant everything to me.",
+    href: "/journey/small-moments",
+  },
 ];
 
-function AnimatedCard({ children, index }: { children: React.ReactNode; index: number }) {
+function AnimatedCard({
+  children,
+  index,
+}: {
+  children: React.ReactNode;
+  index: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(ref);
 
@@ -40,11 +51,15 @@ export function TimelineSection() {
         <div className="relative md:border-l-2 md:border-accent/50 md:pl-10 space-y-12">
           {timelineEvents.map((event, index) => (
             <AnimatedCard key={event.id} index={index}>
-              <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/20 bg-card">
-                <CardContent className="p-6">
-                  <p className="text-lg font-body text-card-foreground">{event.text}</p>
-                </CardContent>
-              </Card>
+              <Link href={event.href}>
+                <Card className="shadow-md hover:shadow-lg transition-shadow duration-300 border-primary/20 bg-card cursor-pointer">
+                  <CardContent className="p-6">
+                    <p className="text-lg font-body text-card-foreground">
+                      {event.text}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             </AnimatedCard>
           ))}
         </div>
