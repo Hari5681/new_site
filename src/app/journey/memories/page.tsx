@@ -1,13 +1,16 @@
+
 import { Button } from "@/components/ui/button";
 import { FloatingParticles } from "@/components/floating-particles";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
 
 const memories = [
   {
+    type: 'image',
     id: 1,
     imageUrl:
       "https://images.unsplash.com/photo-1516151322954-621642a2b64b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3VwbGUlMjBiZWFjaHxlbnwwfHx8fDE3NjM1MjI5OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -17,6 +20,12 @@ const memories = [
     height: 750,
   },
   {
+    type: 'text',
+    id: 'memory-1',
+    content: "Nuvvu first time natho matladina moment… ‘Why you don’t talk to anyone?’ ani adigina aa line… naa mind lo still fresh ga undi. Aa voice tone… aa softness… first time vinagane, I knew it was something I can’t forget."
+  },
+  {
+    type: 'image',
     id: 2,
     imageUrl:
       "https://images.unsplash.com/photo-1597308011529-f634f4cab827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3p5JTIwY2FmZXxlbnwwfHx8fDE3NjM0NzA4NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -26,6 +35,31 @@ const memories = [
     height: 400,
   },
   {
+    type: 'multi-part-text',
+    id: 'memory-2',
+    title: "Ninnu choosi na feelings cheppadaniki chesina attempts…",
+    description: "anni na gunde lo deep ga nilichipoyayi.",
+    parts: [
+      {
+        title: "1st Attempt — 10-01-2025 (Sankranthi Event)",
+        text: "Radish maroon half vesukoni vachinav… aa roju cheppalani anukunna… kani dhairyam raledu."
+      },
+      {
+        title: "2nd Attempt — 01-02-2025",
+        text: "Drink chesi college degara ki vachanu… kani Bharath matter lo stop ayyi poyanu."
+      },
+      {
+        title: "3rd Attempt — 28-03-2025 (Last day of fest)",
+        text: "Ninnu follow ayyanu… cheppalani anukunna… kani words raledu."
+      },
+      {
+        title: "4th Attempt — 20-09-2025",
+        text: "Ee rozey nenu direct ga message chesa. Ee attempt na life lo biggest memory."
+      }
+    ]
+  },
+  {
+    type: 'image',
     id: 3,
     imageUrl:
       "https://images.unsplash.com/photo-1695049761557-cb56d348c297?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxob2xkaW5nJTIwaGFuZHN8ZW58MHx8fHwxNzYzNDc3MTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -35,6 +69,7 @@ const memories = [
     height: 350,
   },
   {
+    type: 'image',
     id: 4,
     imageUrl:
       "https://images.unsplash.com/photo-1501901609772-df0848060b33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb3VwbGUlMjBzbWlsaW5nfGVufDB8fHx8MTc2MzUyNzI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -44,6 +79,12 @@ const memories = [
     height: 500,
   },
   {
+    type: 'text',
+    id: 'memory-3',
+    content: "Mana first hug nee birthday roju. Ado oka warm connection… I’ll never forget it."
+  },
+  {
+    type: 'image',
     id: 5,
     imageUrl:
       "https://images.unsplash.com/photo-1516366353199-ed694fec414f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHZpZXd8ZW58MHx8fHwxNzYzNTUxOTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -53,6 +94,12 @@ const memories = [
     height: 800,
   },
   {
+    type: 'text',
+    id: 'memory-4',
+    content: "Netho unna prathi talk, prathi smile, prathi moment… naa life lo special chapter."
+  },
+  {
+    type: 'image',
     id: 7,
     imageUrl: "https://i.ibb.co/L5BYS5v/image.png",
     imageHint: "couple drawing",
@@ -61,6 +108,7 @@ const memories = [
     height: 500,
   },
   {
+    type: 'image',
     id: 6,
     imageUrl:
       "https://images.unsplash.com/photo-1656558136312-71b8f36bea25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3VwbGUlMjB0cmF2ZWx8ZW58MHx8fHwxNzYzNTI0NDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -101,21 +149,55 @@ export default function MemoriesPage() {
               className="break-inside-avoid animate-in fade-in slide-in-from-bottom-5 duration-700"
               style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
             >
-              <Card className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-primary/10 bg-card group hover:scale-105 hover:shadow-primary/20">
-                <CardContent className="p-0">
-                  <Image
-                    src={memory.imageUrl}
-                    alt={memory.caption}
-                    width={memory.width}
-                    height={memory.height}
-                    data-ai-hint={memory.imageHint}
-                    className="w-full h-auto"
-                  />
-                  <p className="p-4 text-sm font-body text-card-foreground/80 italic">
-                    {memory.caption}
-                  </p>
-                </CardContent>
-              </Card>
+              {memory.type === 'image' && (
+                <Card className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-primary/10 bg-card group hover:scale-105 hover:shadow-primary/20">
+                  <CardContent className="p-0">
+                    <Image
+                      src={memory.imageUrl}
+                      alt={memory.caption || ''}
+                      width={memory.width}
+                      height={memory.height}
+                      data-ai-hint={memory.imageHint}
+                      className="w-full h-auto"
+                    />
+                    {memory.caption && (
+                      <p className="p-4 text-sm font-body text-card-foreground/80 italic">
+                        {memory.caption}
+                      </p>
+                    )}
+                  </CardContent>
+                </Card>
+              )}
+
+              {memory.type === 'text' && (
+                <Card className="rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-primary/10 bg-card group hover:scale-105 hover:shadow-primary/20">
+                  <CardContent className="p-6">
+                    <p className="font-body text-base text-card-foreground/90 italic leading-relaxed">
+                      {memory.content}
+                    </p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {memory.type === 'multi-part-text' && (
+                 <Card className="rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-primary/10 bg-card group hover:scale-105 hover:shadow-primary/20">
+                    <CardHeader>
+                      <CardTitle className="font-headline text-2xl text-primary-foreground/80">{memory.title}</CardTitle>
+                      {memory.description && <CardDescription className="font-body italic">{memory.description}</CardDescription>}
+                    </CardHeader>
+                    <CardContent className="space-y-4 pt-0">
+                      {memory.parts.map((part, i) => (
+                        <div key={i}>
+                          { i > 0 && <Separator className="my-3" /> }
+                          <p className="font-body font-semibold text-sm text-primary-foreground/70">{part.title}</p>
+                          <p className="font-body text-base text-card-foreground/90 italic mt-1">
+                            “{part.text}”
+                          </p>
+                        </div>
+                      ))}
+                    </CardContent>
+                 </Card>
+              )}
             </div>
           ))}
         </div>
@@ -123,3 +205,5 @@ export default function MemoriesPage() {
     </main>
   );
 }
+
+    
