@@ -27,13 +27,9 @@ export default function ProposalPage() {
           
           <Countdown date={proposalDate} />
 
-          <div className="space-y-6 font-body text-lg text-card-foreground mt-12">
+          <div className="space-y-6 font-body text-lg text-card-foreground mt-12 text-center">
             <p>
-              This is where you can write about the future proposal. Add all the
-              dreams and plans you have for that special day.
-            </p>
-            <p>
-              You can add more paragraphs here to elaborate on the memory-to-be.
+              This day became the day I stopped hiding my heart and finally let it speak.
             </p>
           </div>
         </div>
