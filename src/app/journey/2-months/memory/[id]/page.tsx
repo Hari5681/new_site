@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { useParams } from "next/navigation";
 
 const memories: Record<string, any> = {
     '1': {
@@ -49,8 +50,9 @@ const memories: Record<string, any> = {
     },
 };
 
-export default function MemoryDetailPage({ params }: { params: { id: string } }) {
-    const memory = memories[params.id];
+export default function MemoryDetailPage() {
+    const params = useParams();
+    const memory = memories[params.id as string];
 
     if (!memory) {
         return (
