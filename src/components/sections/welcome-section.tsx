@@ -1,5 +1,6 @@
 "use client";
 
+import { FloatingParticles } from "@/components/floating-particles";
 import { useEffect, useState } from "react";
 
 export function WelcomeSection() {
@@ -11,9 +12,10 @@ export function WelcomeSection() {
   }, []);
 
   return (
-    <section className="min-h-screen w-full flex flex-col items-center justify-center text-center p-4">
+    <section className="min-h-screen w-full flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
+      <FloatingParticles />
       <div
-        className={`transition-all duration-1000 ease-out ${
+        className={`z-10 transition-all duration-1000 ease-out ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
