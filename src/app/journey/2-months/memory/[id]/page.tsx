@@ -54,7 +54,7 @@ const memories: Record<string, any> = {
     '5': {
         type: 'image-with-text',
         title: 'Your Birthday',
-        content: "Celebrating you was one of the best days. Seeing you happy made my entire year.",
+        content: "Nee birthday roju… aa day ni nenu eppudu marchiponu. Endukante aa rojuna nenu nee gurinchi okka different feeling feel ayyanu. Naa heart lo adi calm, warm, soft ga settle ayipoyindi. Aa rojuna ninnu chusina way… naatho epudu undi. That day felt special… different… unforgettable.",
         imageUrl: "https://i.postimg.cc/P51017rM/Whats-App-Image-2025-11-19-at-17-12-20-ecda54e6.jpg",
         imageHint: "birthday celebration"
     }
