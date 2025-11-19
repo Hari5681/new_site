@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRef } from "react";
@@ -8,9 +9,10 @@ import { FloatingParticles } from "@/components/floating-particles";
 
 const timelineEvents = [
   { id: 1, text: "The day I proposed…", href: "/journey/proposal" },
-  { id: 2, text: "Two months of memories…", href: "/journey/memories" },
+  { id: 2, text: "Our 2-Month Journey...", href: "/journey/2-months" },
+  { id: 3, text: "Memories I kept close…", href: "/journey/memories" },
   {
-    id: 3,
+    id: 4,
     text: "Small moments that meant everything to me.",
     href: "/journey/small-moments",
   },
