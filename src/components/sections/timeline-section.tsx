@@ -11,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 
 const timelineEvents = [
   { id: 1, title: "The Day I'll Propose…", href: "/journey/proposal", description: "Counting down to our forever." },
-  { id: 2, title: "Our 2 Month Journey", href: "/journey/2-months", description: "Moments I’ll always keep close." },
+  { id: 2, title: "memories", href: "/journey/2-months", description: "Moments I’ll always keep close." },
   { id: 3, title: "A Letter For You", href: "/journey/letter", description: "Words straight from my heart." },
 ];
 
