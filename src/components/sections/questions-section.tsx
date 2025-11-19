@@ -14,7 +14,7 @@ export function QuestionsSection() {
         <div className="bg-card p-8 md:p-12 rounded-lg shadow-lg border border-primary/10 text-center">
           <p className="font-body text-lg leading-relaxed text-card-foreground mb-8">
             The questions that linger in my mind, the curiosities I've kept to
-            myself.
+            myself. Some questions… stayed inside.
           </p>
           <Link href="/journey/questions">
             <Button>
