@@ -1,3 +1,4 @@
+
 "use client";
 
 import { FloatingParticles } from "@/components/floating-particles";
@@ -20,7 +21,11 @@ export function EndingSection() {
         
         {!isRevealed ? (
             <div className="flex flex-col items-center gap-8">
-                <Button onClick={handleReveal} size="lg" className="rounded-full p-6 shadow-lg transform transition-transform hover:scale-110">
+                <Button 
+                    onClick={handleReveal} 
+                    size="lg" 
+                    className="rounded-full p-6 shadow-lg transform transition-transform hover:scale-110 bg-pink-400 hover:bg-pink-500 text-white animate-pulse shadow-pink-400/50"
+                >
                     <Heart className="w-8 h-8" />
                 </Button>
             </div>
