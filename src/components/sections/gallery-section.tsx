@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { placeholderImages } from "@/lib/placeholder-images";
+import { FloatingParticles } from "../floating-particles";
 
 export function GallerySection() {
   const images = placeholderImages.filter(img => img.id.startsWith("gallery-"));
 
   return (
-    <section className="w-full py-20 px-4 bg-background">
-      <div className="container mx-auto">
+    <section className="w-full py-20 px-4 bg-background relative overflow-hidden">
+      <FloatingParticles />
+      <div className="container mx-auto relative z-10">
         <h2 className="font-headline text-4xl md:text-6xl text-center text-gray-800 mb-12">
           Cherished Memories
         </h2>

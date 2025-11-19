@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useOnScreen } from "@/hooks/use-on-screen";
+import { FloatingParticles } from "@/components/floating-particles";
 
 const timelineEvents = [
   { id: 1, text: "The day I proposed…" },
@@ -30,8 +31,9 @@ function AnimatedCard({ children, index }: { children: React.ReactNode; index: n
 
 export function TimelineSection() {
   return (
-    <section className="w-full py-20 px-4 bg-primary/10">
-      <div className="container mx-auto max-w-3xl">
+    <section className="w-full py-20 px-4 bg-primary/10 relative overflow-hidden">
+      <FloatingParticles />
+      <div className="container mx-auto max-w-3xl relative z-10">
         <h2 className="font-headline text-4xl md:text-6xl text-center text-gray-800 mb-16">
           Our Journey
         </h2>
