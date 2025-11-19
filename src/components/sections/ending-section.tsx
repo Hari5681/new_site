@@ -20,11 +20,6 @@ export function EndingSection() {
         
         {!isRevealed ? (
             <div className="flex flex-col items-center gap-8">
-                <p className="font-body text-xl md:text-2xl text-gray-700">
-                    Take your time. I’ll take mine.
-                    <br />
-                    I’m not going anywhere.
-                </p>
                 <Button onClick={handleReveal} size="lg" className="rounded-full p-6 shadow-lg transform transition-transform hover:scale-110">
                     <Heart className="w-8 h-8" />
                 </Button>
