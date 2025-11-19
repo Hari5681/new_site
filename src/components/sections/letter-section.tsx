@@ -42,43 +42,19 @@ export function LetterSection() {
               <CardContent className="p-8 md:p-12">
                 <div className="space-y-4 font-body text-base md:text-lg text-card-foreground leading-relaxed">
                   <p>
-                    Mana tastes match kakapoyina, mana thinking different
-                    ayina… nitho matladadam naku surprising ga easy ayindi.
-                    Effort laga kaadu, forced laga kaadu… just flow ayindi. Naa
-                    overthinking ni nuvvu eppudu judge cheyyaledu, laugh
-                    cheyyaledu… calm ga vinavu. Nenu words half ga cheppina,
-                    confuse ayina… nuvvu patience tho wait ayyi ardham chesavu.
-                    Oka chinna attention, oka ‘em ayyindi?’ ane line… avi naku
-                    chaala ekkuva value ayyayi, endukante chala rojul tharvatha
-                    nenu someone nundi care feel ayyanu.
+                    Nuvvu chupīnchina care, attention… honestly, naku chaala impact chesindi. Nenu imagination lo anukune ammai ante— calm ga, silent ga, soft behaviour tho untundi ani. Kani nitho journey start ayyaka… nenu realize ayyanu, naa imagination kanna real person important ani.
                   </p>
                   <p>
-                    Ee last 60 days lo nenu nitho attach ayyanu—honestly, naku
-                    kuda teliyani ga happen ayyindi. Niku message ivvakapothe day
-                    complete ayina feeling raledu. Nee reply late ayithe chinna
-                    tension, chinna fear… immediate ga mind lo ‘I hope
-                    everything is okay’ ane thought. Nuvvu silence lo unte,
-                    nenu unnecessary ga overthink ayya… adi nuvvu kaadhu, naa
-                    past nundi vachina fear. Once evaro leave chesina memory…
-                    still trigger avuthundi.
+                    Nijamga naku correct ga set ayye ammai ante… naa overthinking ni judge cheyakunda handle chese, naa silence ni meaning tho ardham chese, naku pressure lekunda calm feel cheyyinche ammai. And nitho unnapude naku clarity ochindi— ‘maybe naa mind lo anukune ideal ammai kaadhu… naa life lo kavalsindhi nuvve laantodi’ ani.
                   </p>
                   <p>
-                    Inka honest ga cheppalante… konni sarlu nenu silent ayya.
-                    Adhi niku pain ivvalani kaadu. Adhi nenu naa pov lo na
-                    feelings, na doubts clear chesukuntunna time. Konni sarlu
-                    nenu simple care lines expect chesa, like ‘em ayyindi?’,
-                    ‘endhuku call cheyyaledu?’… adhi entitlement kaadhu, just
-                    that missing-feeling nundi. Oka small line kuda nannu calm
-                    chestundi.
+                    Nijam ga relaxed ga cheppalante… nennu artham chesukune ammai kavali. Ok mari thanaki nuvvu nannu ardham chesutunnav anukunte… mari nenu kuda ninnu, nee situations ni same clarity tho ardham chesukovali. But konni vishayallo… nenu fail ayyanu. Adhi intention kaadhu… adhi na overthinking, na fears disturb chesina time.
                   </p>
                   <p>
-                    Nenu okka pedda vishayam realize ayyanu… nenu ninnu hurt
-                    cheyyalani eppudu anukoledhu. But naa overthinking, naa
-                    fears tho react ayyi, konni sarlu nuvvu already face
-                    chesina pain ni malli remind chesina la ayyindi… adhi
-                    tharvatha nannu chaala deep ga hit chesindi. ‘I hurt the one
-                    person I never wanted to hurt’ ane thought nannu lopala
-                    stop chesindi.
+                    Naa mind sometimes unnecessary ga run avvadam valla, nuvvu hurt ayye la matladina moments ochai. Nee past lo unna pain malli gurthu chesina la ayipoyindi… adhi nenu eppudu kuda wish cheyyaledu.
+                  </p>
+                   <p>
+                    Nuvvu tappu cheyyakunda unnapatiki, nenu naa doubts valla oka sari kaadu— many times same mistakes repeat chesa. That’s the part nannu nene bad ga feel avvadaniki reason. Nuvvu deserve chesedi calm, safe, soft love… ekani konni sarlu nenu naa fears ki lose ayyanu.
                   </p>
                 </div>
               </CardContent>
