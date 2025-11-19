@@ -53,6 +53,14 @@ const memories = [
     height: 800,
   },
   {
+    id: 7,
+    imageUrl: "https://i.ibb.co/L5BYS5v/image.png",
+    imageHint: "couple drawing",
+    caption: "Our first masterpiece.",
+    width: 500,
+    height: 500,
+  },
+  {
     id: 6,
     imageUrl:
       "https://images.unsplash.com/photo-1656558136312-71b8f36bea25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3VwbGUlMjB0cmF2ZWx8ZW58MHx8fHwxNzYzNTI0NDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
