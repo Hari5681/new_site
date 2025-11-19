@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
 
-const names = ["chinnu", "junnu", "navya"];
+const names = ["chinnu", "navya", "junnu"];
 const staticText = ", this little space is just for you.";
 
 export function WelcomeSection() {

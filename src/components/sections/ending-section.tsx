@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export function EndingSection() {
   const [isRevealed, setIsRevealed] = useState(false);
-  const textToReveal = "I LOVE SO MUCH CHINNU".split(" ");
+  const textToReveal = "Chunnu… I love you more than I can ever say.".split(" ");
 
   const handleReveal = () => {
     setIsRevealed(true);
