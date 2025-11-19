@@ -73,7 +73,7 @@ export default function TwoMonthsJourneyPage() {
 
         <div className="text-center mb-16 animate-in fade-in duration-1000">
             <h1 className="font-headline text-5xl md:text-7xl text-primary-foreground/80">
-                memory with u
+                memories with &lt;3
             </h1>
             <p className="font-body text-lg md:text-xl text-muted-foreground mt-4">
                 “Moments, conversations, and silent understandings.”
