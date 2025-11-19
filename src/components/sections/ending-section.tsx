@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 export function EndingSection() {
   const [isRevealed, setIsRevealed] = useState(false);
+  const textToReveal = "I LOVE SO MUCH CHINNU".split(" ");
 
   const handleReveal = () => {
     setIsRevealed(true);
@@ -33,12 +34,21 @@ export function EndingSection() {
         ) : (
             <div className="flex flex-col items-center">
                 <h2 
-                    className={cn(
-                        "font-headline text-5xl md:text-8xl text-pink-400 transition-all duration-1000 ease-in-out",
-                        isRevealed ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-90"
-                    )}
+                    className="font-headline text-5xl md:text-8xl text-pink-400"
                 >
-                    I LOVE SO MUCH CHINNU
+                    {textToReveal.map((word, index) => (
+                        <span
+                            key={index}
+                            className="inline-block transition-all duration-700 ease-out"
+                            style={{ 
+                                opacity: isRevealed ? 1 : 0, 
+                                transform: isRevealed ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.9)',
+                                transitionDelay: `${index * 200}ms`
+                            }}
+                        >
+                            {word}&nbsp;
+                        </span>
+                    ))}
                 </h2>
             </div>
         )}
