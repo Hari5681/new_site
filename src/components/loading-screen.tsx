@@ -1,12 +1,15 @@
 'use client';
 
 import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export function LoadingScreen({ isLoading }: { isLoading: boolean }) {
-  if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-primary/10 backdrop-blur-sm animate-in fade-in duration-500">
+    <div className={cn(
+        "fixed inset-0 z-[100] flex items-center justify-center bg-primary/10 backdrop-blur-sm transition-opacity duration-500",
+        isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      )}>
       <div className="relative">
         <Heart
           className="text-pink-300 w-24 h-24 animate-pulse"
