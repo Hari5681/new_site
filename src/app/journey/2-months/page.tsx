@@ -22,14 +22,14 @@ const memories = [
       excerpt: "Feelings I tried to share, but couldn't...",
     },
     {
-      id: '3',
-      title: "Our First Hug",
-      excerpt: "A warm connection I’ll never forget.",
-    },
-    {
       id: '5',
       title: "Your Birthday",
       excerpt: "A day dedicated to you.",
+    },
+    {
+      id: '3',
+      title: "Our First Hug",
+      excerpt: "A warm connection I’ll never forget.",
     },
     {
       id: '4',
