@@ -9,7 +9,7 @@ import { FloatingParticles } from "@/components/floating-particles";
 
 const timelineEvents = [
   { id: 1, text: "The day I proposed…", href: "/journey/proposal" },
-  { id: 2, text: "Our 2-Month Journey...", href: "/journey/2-months" },
+  { id: 2, text: "The 2-Month Journey & Memories...", href: "/journey/2-months" },
   { id: 3, text: "Memories I kept close…", href: "/journey/memories" },
   {
     id: 4,
