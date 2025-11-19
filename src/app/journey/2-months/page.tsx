@@ -62,7 +62,7 @@ export default function TwoMonthsJourneyPage() {
     <main className="flex min-h-screen flex-col items-center p-4 md:p-12 relative bg-primary/5 overflow-x-hidden">
       <FloatingParticles />
       <div className="z-10 w-full max-w-5xl">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-8 animate-in fade-in duration-500">
             <Link href="/#">
             <Button variant="ghost">
                 <ArrowLeft className="mr-2 h-4 w-4" />

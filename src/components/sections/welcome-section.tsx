@@ -4,6 +4,10 @@
 import { FloatingParticles } from "@/components/floating-particles";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowDown } from "lucide-react";
 
 const names = ["chinnu", "junnu", "navya"];
 const fullTextPrefix = ", this little space is just for you.";
@@ -13,7 +17,6 @@ export function WelcomeSection() {
   const [nameIndex, setNameIndex] = useState(0);
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [loopNum, setLoopNum] = useState(0);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
@@ -23,22 +26,24 @@ export function WelcomeSection() {
   useEffect(() => {
     const handleTyping = () => {
       const currentName = names[nameIndex];
-      const fullText = currentName + fullTextPrefix;
-      
+      const isNamePart = typedText.length < currentName.length;
+
       if (isDeleting) {
-        // Deleting name part
-        setTypedText(prev => prev.substring(0, prev.length - 1));
-        if (typedText.length === 0) {
+        if (typedText.length > currentName.length) {
+            setTypedText(prev => prev.substring(0, prev.length - 1));
+        } else if(typedText.length > 0) {
+            setTypedText(prev => prev.substring(0, prev.length - 1));
+        }
+        
+        if (typedText.length === 1) {
             setIsDeleting(false);
             setNameIndex(prev => (prev + 1) % names.length);
         }
-      } else {
-        // Typing name part
+      } else { // Typing
         if (typedText.length < currentName.length) {
-          setTypedText(fullText.substring(0, typedText.length + 1));
-        } else if (typedText.length < fullText.length) {
-          // Typing suffix part
-          setTypedText(fullText.substring(0, typedText.length + 1));
+          setTypedText(currentName.substring(0, typedText.length + 1));
+        } else if (typedText.length < (currentName.length + fullTextPrefix.length)) {
+          setTypedText(currentName + fullTextPrefix.substring(0, typedText.length - currentName.length + 1));
         } else {
           // Pause and then start deleting
           setTimeout(() => setIsDeleting(true), 2000);
@@ -46,7 +51,7 @@ export function WelcomeSection() {
       }
     };
 
-    const typingSpeed = isDeleting ? 100 : 150;
+    const typingSpeed = isDeleting ? 80 : 120;
     const typingTimeout = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(typingTimeout);
