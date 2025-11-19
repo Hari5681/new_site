@@ -1,9 +1,19 @@
 "use client";
 
 import { Heart } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const Particle = ({ delay, duration, size }: { delay: number; duration: number; size: number }) => {
-  const left = Math.random() * 100;
+const Particle = ({
+  delay,
+  duration,
+  size,
+  left,
+}: {
+  delay: number;
+  duration: number;
+  size: number;
+  left: number;
+}) => {
   return (
     <div
       className="absolute bottom-[-20px] animate-float"
@@ -23,18 +33,42 @@ const Particle = ({ delay, duration, size }: { delay: number; duration: number; 
   );
 };
 
+type ParticleData = {
+  id: number;
+  delay: number;
+  duration: number;
+  size: number;
+  left: number;
+};
+
 export function FloatingParticles() {
-  const particles = Array.from({ length: 15 }).map((_, i) => ({
-    id: i,
-    delay: Math.random() * 10,
-    duration: Math.random() * 10 + 5,
-    size: Math.random() * 20 + 10,
-  }));
+  const [particles, setParticles] = useState<ParticleData[]>([]);
+
+  useEffect(() => {
+    const generatedParticles = Array.from({ length: 15 }).map((_, i) => ({
+      id: i,
+      delay: Math.random() * 10,
+      duration: Math.random() * 10 + 5,
+      size: Math.random() * 20 + 10,
+      left: Math.random() * 100,
+    }));
+    setParticles(generatedParticles);
+  }, []);
+
+  if (particles.length === 0) {
+    return null;
+  }
 
   return (
     <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
       {particles.map((p) => (
-        <Particle key={p.id} delay={p.delay} duration={p.duration} size={p.size} />
+        <Particle
+          key={p.id}
+          delay={p.delay}
+          duration={p.duration}
+          size={p.size}
+          left={p.left}
+        />
       ))}
     </div>
   );
