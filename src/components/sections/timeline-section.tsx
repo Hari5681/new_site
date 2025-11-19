@@ -41,7 +41,7 @@ function AnimatedCard({
 
 export function TimelineSection() {
   return (
-    <section className="w-full py-24 px-4 bg-primary/10 relative overflow-hidden">
+    <section id="journey" className="w-full py-24 px-4 bg-primary/10 relative overflow-hidden">
       <FloatingParticles />
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center mb-16">
