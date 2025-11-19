@@ -76,7 +76,7 @@ export default function MemoryDetailPage() {
         <main className="flex min-h-screen flex-col items-center p-4 md:p-12 relative bg-primary/5">
             <FloatingParticles />
             <div className="z-10 w-full max-w-4xl">
-                <div className="mb-8">
+                <div className="mb-8 animate-in fade-in duration-500">
                     <Link href="/journey/2-months">
                         <Button variant="ghost">
                             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -85,14 +85,14 @@ export default function MemoryDetailPage() {
                     </Link>
                 </div>
 
-                <div className="animate-in fade-in duration-1000">
+                <div className="animate-in fade-in-0 zoom-in-95 duration-1000">
                     {memory.type === 'text' && (
-                        <Card className="rounded-lg shadow-lg border-primary/10 bg-card">
-                            <CardHeader>
-                                <CardTitle className="font-headline text-4xl md:text-5xl text-primary-foreground/80">{memory.title}</CardTitle>
+                        <Card className="rounded-2xl shadow-lg border-primary/10 bg-card overflow-hidden">
+                            <CardHeader className="bg-primary/5 p-8">
+                                <CardTitle className="font-headline text-4xl md:text-5xl text-primary-foreground/80 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200 fill-mode-both">{memory.title}</CardTitle>
                             </CardHeader>
-                            <CardContent>
-                                <p className="font-body text-lg text-card-foreground/90 italic leading-relaxed">
+                            <CardContent className="p-8">
+                                <p className="font-body text-lg text-card-foreground/90 italic leading-relaxed animate-in fade-in slide-in-from-bottom-5 duration-700 delay-500 fill-mode-both">
                                     “{memory.content}”
                                 </p>
                             </CardContent>
@@ -100,15 +100,15 @@ export default function MemoryDetailPage() {
                     )}
 
                     {memory.type === 'multi-part-text' && (
-                        <Card className="rounded-lg shadow-lg border-primary/10 bg-card">
-                            <CardHeader className="text-center">
-                                <CardTitle className="font-headline text-4xl md:text-5xl text-primary-foreground/80">{memory.title}</CardTitle>
-                                {memory.description && <CardDescription className="font-body text-lg italic mt-2">{memory.description}</CardDescription>}
+                        <Card className="rounded-2xl shadow-lg border-primary/10 bg-card overflow-hidden">
+                            <CardHeader className="text-center bg-primary/5 p-8">
+                                <CardTitle className="font-headline text-4xl md:text-5xl text-primary-foreground/80 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-200 fill-mode-both">{memory.title}</CardTitle>
+                                {memory.description && <CardDescription className="font-body text-lg italic mt-2 animate-in fade-in slide-in-from-bottom-5 duration-700 delay-400 fill-mode-both">{memory.description}</CardDescription>}
                             </CardHeader>
-                            <CardContent className="space-y-6 pt-2">
+                            <CardContent className="space-y-6 p-8">
                                 {memory.parts.map((part: any, i: number) => (
-                                    <div key={i} className="text-center">
-                                        {i > 0 && <Separator className="my-6 w-1/2 mx-auto" />}
+                                    <div key={i} className="text-center animate-in fade-in-0 slide-in-from-bottom-5 duration-700 fill-mode-both" style={{ animationDelay: `${600 + i * 200}ms` }}>
+                                        {i > 0 && <Separator className="my-6 w-1/2 mx-auto bg-primary/20" />}
                                         <h3 className="font-body font-semibold text-xl text-primary-foreground/70">{part.title}</h3>
                                         <p className="font-body text-lg text-card-foreground/90 italic mt-2">
                                             “{part.text}”
