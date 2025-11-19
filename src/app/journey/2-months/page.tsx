@@ -71,7 +71,7 @@ export default function TwoMonthsJourneyPage() {
                 memory with u
             </h1>
             <p className="font-body text-lg md:text-xl text-muted-foreground mt-4">
-                “Two months of moments, conversations, and silent understandings.”
+                “Moments, conversations, and silent understandings.”
             </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function TwoMonthsJourneyPage() {
 
         <div className="text-center my-24 py-12 animate-in fade-in duration-1000 delay-500 fill-mode-both">
             <p className="font-body text-xl md:text-2xl text-muted-foreground">
-                These 2 months meant more than I ever showed.
+                These moments meant more than I ever showed.
             </p>
         </div>
 
