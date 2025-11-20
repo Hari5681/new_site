@@ -43,7 +43,7 @@ const memories: Record<string, any> = {
         type: 'image-with-text',
         title: 'Our First Hug',
         content: "Mana first hug nee birthday roju. Ado oka warm connection… I’ll never forget it.",
-        imageUrl: "https://i.postimg.cc/tRSbg8Yx/Whats-App-Image-2025-11-19-at-21-59-18-25c5fef8.jpg",
+        imageUrl: "https://i.postimg.cc/N0bC1rmh/Whats-App-Image-2025-11-19-at-21-59-18-2c0abdd0.jpg",
         imageHint: "couple drawing"
     },
     '4': {
