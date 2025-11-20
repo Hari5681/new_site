@@ -4,7 +4,7 @@
 import { FloatingParticles } from "@/components/floating-particles";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowDown, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const names = ["chinnu", "navya", "junnu"];
 const staticText = ", this little space is just for you.";
@@ -118,7 +118,6 @@ export function WelcomeSection() {
                     className="p-2 rounded-full text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary/10 transition-colors"
                     aria-label="Scroll down"
                 >
-                    <ArrowDown className="w-8 h-8 animate-bounce" />
                 </button>
             </div>
         </>
