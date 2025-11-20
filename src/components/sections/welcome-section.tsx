@@ -4,7 +4,7 @@
 import { FloatingParticles } from "@/components/floating-particles";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Heart } from "lucide-react";
 
 const names = ["chinnu", "navya", "junnu"];
 const staticText = ", this little space is just for you.";
@@ -63,6 +63,9 @@ export function WelcomeSection() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         )}
       >
+        <div className="mb-8 animate-in fade-in-0 duration-1000 delay-300 fill-mode-both">
+          <Heart className="w-16 h-16 text-pink-300 mx-auto animate-pulse" fill="currentColor" />
+        </div>
         <h1 className="font-headline text-5xl md:text-7xl text-primary-foreground/90 min-h-[100px] md:min-h-[100px]">
             <span className="inline-block">
                 {typedName}
