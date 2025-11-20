@@ -18,6 +18,18 @@ export function WelcomeSection() {
   const [showSecondLine, setShowSecondLine] = useState(false);
 
   useEffect(() => {
+    if (step === 0) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; // Cleanup on unmount
+    };
+  }, [step]);
+  
+  useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
 
     if (step === 0) {
